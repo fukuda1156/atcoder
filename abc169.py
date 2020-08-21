@@ -1,3 +1,5 @@
+# https://atcoder.jp/contests/abc169/submissions/16047194
+
 # 入力をプログラムで扱えるように受け取ること
 a, b = map(int, input().split())
 # print(a, b)
