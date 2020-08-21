@@ -1,3 +1,5 @@
+# https://atcoder.jp/contests/abc146/submissions/16066503
+
 S = input()
 if S == 'SUN':
     print('7')
