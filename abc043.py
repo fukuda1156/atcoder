@@ -1,5 +1,5 @@
 n = map(int, input())
 
-answer = n * (n + 1) / 2
+print sum(n + 1) * n / 2
 
-print(answer)
+
