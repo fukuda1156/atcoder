@@ -1,8 +1,10 @@
-A,B,C=map(int,input().split())
+# https://atcoder.jp/contests/abc075/submissions/16162705
 
-if int(A)==int(B):
-  print(C)
-elif int(A)==int(C):
-  print(B)
-elif int(B)==int(C):
-  print(A)
+a, b, c =map(int,input().split())
+
+if int(a) == int(b):
+  print(c)
+elif int(a) == int(c):
+  print(b)
+elif int(b) == int(c):
+  print(a)
