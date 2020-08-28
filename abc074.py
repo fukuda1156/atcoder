@@ -1,4 +1,4 @@
-https://atcoder.jp/contests/abc074/submissions/16273197
+# https://atcoder.jp/contests/abc074/submissions/16273197
 
 n = int(input())
 a = int(input())
