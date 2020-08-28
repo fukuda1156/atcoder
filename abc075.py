@@ -1,6 +1,6 @@
 # https://atcoder.jp/contests/abc075/submissions/16162705
 
-a, b, c =map(int,input().split())
+a, b, c = map(int,input().split())
 
 if int(a) == int(b):
   print(c)

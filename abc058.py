@@ -1,6 +1,4 @@
-a = int(input())
-b = int(input())
-c = int(input())
+# a, b, c= map(int, input().split())
 
 ba = b - a
 cb = c - b
