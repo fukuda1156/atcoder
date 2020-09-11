@@ -1,5 +1,9 @@
-a, b, h = map(int, input().split())
+# https://atcoder.jp/contests/abc045/submissions/16637050
 
-answer = (a + b) * h / 2
+a = int(input())
+b = int(input())
+h = int(input())
+
+answer = (a + b) * h // 2
 
 print(answer)
