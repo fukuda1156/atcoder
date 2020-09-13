@@ -1,7 +1,9 @@
-n, m = map(int, input().split())
-d = 5 + 6
+https: // atcoder.jp / contests / abc163 / submissions / 16667603
 
-if n - d <= -1:
+n, m = map(int, input().split())
+d = list(map(int, input().split()))
+
+if n - sum(d) <= -1:
     print(-1)
 else:
-    print(n - d)
+    print(n - sum(d))
