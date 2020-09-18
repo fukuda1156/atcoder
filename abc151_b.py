@@ -1,4 +1,4 @@
-https: // atcoder.jp / contests / abc151 / submissions / 16821595
+# https://atcoder.jp/contests/abc151/submissions/16821595
 
 n, k, m = map(int, input().split())
 a = map(int, input().split())
