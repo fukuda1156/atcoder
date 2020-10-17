@@ -1,7 +1,5 @@
 # https://atcoder.jp/contests/abc129/submissions/17487197
 
-import sys
-
 N = int(input())
 w_list = list(map(int, input().split()))
 
