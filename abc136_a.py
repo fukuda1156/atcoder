@@ -1,11 +1,4 @@
-# https://atcoder.jp/contests/abc136/submissions/17491794
+# https://atcoder.jp/contests/abc136/submissions/17491847
 
 a, b, c = map(int, input().split())
-
-ab = a - b
-answer = c - ab
-
-if answer <= 0:
-    print("0")
-else:
-    print(answer)
+print(max(0, c - a + b))
