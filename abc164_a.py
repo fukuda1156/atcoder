@@ -1,4 +1,4 @@
-# https://atcoder.jp/contests/abc164/submissions/17920271
+# https://atcoder.jp/contestabc164_as/abc164/submissions/17920271
 
 S, W = map(int, input().split())
 
