@@ -1,17 +1,19 @@
-def answer(N: int, L: list) -> str:
-    if max(L) < sum(L) - max(L):
-        return ("Yes")
-    else:
-        return ("No")
+# https://atcoder.jp/contests/abc165/tasks/abc165_b
+
+def answer(N: int, K: int) -> str:
+    i = 1
+    while N >= K ** i:
+        i += 1
+    return str(i)
 
 
 def test_入力例1():
-    assert answer(4, [3, 8, 5, 1]) == "Yes"
+    assert answer(11, 2) == "4"
 
 
 def test_入力例2():
-    assert answer(4, [3, 8, 4, 1]) == "No"
+    assert answer(1010101, 10) == "7"
 
 
 def test_入力例3():
-    assert answer(10, [1, 8, 10, 5, 8, 12, 34, 100, 11, 3]) == "No"
+    assert answer(314159265, 3) == "18"
