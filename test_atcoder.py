@@ -1,12 +1,17 @@
-def answer(a: int, b: int) -> str:
-    if a * b % 2 == 0:
-        return "Even"
-    return "Odd"
+def answer(N: int, K: int) -> str:
+    number = 1
+
+    for i in range(N):
+        if number + K < 2 * number:
+            number += K
+        else:
+            number *= 2
+    return str(number)
 
 
 def test_入力例1():
-    assert answer(3, 4) == "Even"
+    assert answer(4, 3) == "10"
 
 
 def test_入力例2():
-    assert answer(1, 21) == "Odd"
+    assert answer(10, 10) == "76"
