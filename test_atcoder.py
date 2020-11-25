@@ -1,19 +1,16 @@
-# https://atcoder.jp/contests/abc165/tasks/abc165_b
+# https://atcoder.jp/contests/abc184/tasks/abc184_a
 
-def answer(N: int, K: int) -> str:
-    i = 1
-    while N >= K ** i:
-        i += 1
-    return str(i)
+def answer(a: int, b: int, c: int, d: int) -> str:
+    return str((a * d) - (b * c))
 
 
 def test_入力例1():
-    assert answer(11, 2) == "4"
+    assert answer(1, 2, 3, 4) == "-2"
 
 
 def test_入力例2():
-    assert answer(1010101, 10) == "7"
+    assert answer(0, -1, 1, 0) == "1"
 
 
 def test_入力例3():
-    assert answer(314159265, 3) == "18"
+    assert answer(100, 100, 100, 100) == "0"
