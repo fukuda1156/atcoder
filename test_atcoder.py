@@ -1,17 +1,17 @@
-# https://atcoder.jp/contests/abc183/tasks/abc183_a
+# https://atcoder.jp/contests/abc182/tasks/abc182_a
 
-def answer(x: int) -> str:
-    if x >= 0:
-        return str(x)
-    if x < 0:
-        return str(0)
+def answer(A: int, B: int) -> str:
+    limit = 2 * A + 100
+    rising = limit - B
+    return str(rising)
+
 
 def test_入力例1():
-    assert answer(1) == "1"
+    assert answer(200, 300) == "200"
+
 
 def test_入力例2():
-    assert answer(0) == "0"
+    assert answer(10000, 0) == "20100"
 
-
-def test_入力例3():
-    assert answer(-1) == "0"
+# def test_入力例3():
+#     assert answer(-1) == "0"
