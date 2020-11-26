@@ -1,17 +1,18 @@
-# https://atcoder.jp/contests/abc182/tasks/abc182_a
+# https://atcoder.jp/contests/abc163/tasks/abc163_a
 
-def answer(A: int, B: int) -> str:
-    limit = 2 * A + 100
-    rising = limit - B
-    return str(rising)
+import math
+
+
+def answer(R: int) -> float:
+    return 2 * math.pi * R
 
 
 def test_入力例1():
-    assert answer(200, 300) == "200"
+    assert answer(1) == 6.28318530717958623200
 
 
 def test_入力例2():
-    assert answer(10000, 0) == "20100"
+    assert answer(73) == 458.67252742410977361942
 
 # def test_入力例3():
 #     assert answer(-1) == "0"
