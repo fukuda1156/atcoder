@@ -1,17 +1,19 @@
-# https://atcoder.jp/contests/abc167/tasks/abc167_a
+# https://atcoder.jp/contests/abc088/tasks/abc088_a
 
-def answer(S: str, T: str) -> str:
-    if S == T[0:-1]:
+def answer(N: int, A: int) -> str:
+    if N % 500 - A <= 0:
         return "Yes"
     else:
         return "No"
 
+
 def test_入力例1():
-    assert answer("chokudai", "chokudaiz") == "Yes"
+    assert answer(2018, 218) == "Yes"
+
 
 def test_入力例2():
-    assert answer("snuke", "snekee") == "No"
+    assert answer(2763, 0) == "No"
 
 
 def test_入力例3():
-    assert answer("a", "aa") == "Yes"
+    assert answer(37, 514) == "Yes"
