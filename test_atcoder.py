@@ -1,15 +1,17 @@
-# https://atcoder.jp/contests/abc145/tasks/abc145_a
+# https://atcoder.jp/contests/abc183/tasks/abc183_a
 
-def answer(C: str) -> str:
-    return (chr(ord(C) + 1))
-
+def answer(x: int) -> str:
+    if x >= 0:
+        return str(x)
+    if x < 0:
+        return str(0)
 
 def test_入力例1():
-    assert answer("a") == "b"
-
+    assert answer(1) == "1"
 
 def test_入力例2():
-    assert answer("y") == "z"
+    assert answer(0) == "0"
 
-# def test_入力例3():
-#     assert answer(80) == "19200"
+
+def test_入力例3():
+    assert answer(-1) == "0"
