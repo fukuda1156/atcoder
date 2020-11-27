@@ -1,19 +1,18 @@
-# https://atcoder.jp/contests/abc160/tasks/abc160_a
+# https://atcoder.jp/contests/abc157/tasks/abc157_a
 
-def answer(S: list) -> str:
-    if S[2] == S[3] and S[4] == S[5]:
-        return ("Yes")
-    else:
-        return ("No")
+def answer(N: int) -> str:
+    surplus = N % 2
+    truncate = N // 2
+    return str(surplus + truncate)
 
 
 def test_入力例1():
-    assert answer(['s', 'i', 'p', 'p', 'u', 'u']) == "Yes"
+    assert answer(5) == "3"
 
 
 def test_入力例2():
-    assert answer(['i', 'p', 'h', 'o', 'n', 'e']) == "No"
+    assert answer(2) == "1"
 
 
 def test_入力例3():
-    assert answer(['c', 'o', 'f', 'f', 'e', 'e']) == "Yes"
+    assert answer(100) == "50"
