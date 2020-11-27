@@ -1,13 +1,8 @@
-# https://atcoder.jp/contests/abc078/submissions/17917667
+R = int(input())
 
-X, Y = input().split()
-
-X16 = f"{X}".encode('utf-8', 'replace').hex()
-Y16 = f"{Y}".encode('utf-8', 'replace').hex()
-
-if X16 > Y16:
-    print(">")
-if X16 < Y16:
-    print("<")
-if X16 == Y16:
-    print("=")
+if 0 <= R < 1200:
+    print("ABC")
+if 1200 <= R < 2800:
+    print("ARC")
+if 2800 <= R:
+    print("AGC")
