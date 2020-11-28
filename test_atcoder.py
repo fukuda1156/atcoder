@@ -1,16 +1,19 @@
-# https://atcoder.jp/contests/abc095/tasks/abc095_a
+# https://atcoder.jp/contests/abc118/tasks/abc118_a
 
-def answer(S: list) -> str:
-    return str(700 + (S.count('o') * 100))
+def answer(A: int, B: int) -> str:
+    if B % A == 0:
+        return str(A + B)
+    else:
+        return str(B - A)
 
 
 def test_入力例1():
-    assert answer(['o', 'x', 'o']) == "900"
+    assert answer(4, 12) == "16"
 
 
 def test_入力例2():
-    assert answer(['o', 'o', 'o']) == "1000"
+    assert answer(8, 20) == "12"
 
 
 def test_入力例3():
-    assert answer(['x', 'x', 'x']) == "700"
+    assert answer(1, 1) == "2"
