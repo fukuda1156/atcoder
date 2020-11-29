@@ -1,26 +1,33 @@
-# https://atcoder.jp/contests/abc103/tasks/abc103_a
+# https://atcoder.jp/contests/abc155/tasks/abc155_a
 
-def answer(N: int, R: int) -> str:
-    if N < 10:
-        return str(100 * (10 - N) + R)
+def answer(A: str, B: str, C: str) -> str:
+    if A == B and B != C:
+        return "Yes"
+
+    elif B == C and C != A:
+        return "Yes"
+
+    elif C == A and A != B:
+        return "Yes"
+
     else:
-        return str(R)
+        return "No"
 
 
 def test_入力例1():
-    assert answer(2, 2919) == "3719"
+    assert answer(5, 7, 5) == "Yes"
 
 
 def test_入力例2():
-    assert answer(22, 3051) == "3051"
+    assert answer(4, 4, 4) == "No"
 
-# def test_入力例3():
-#     assert answer(1, 1) == "0"
-#
-#
-# def test_入力例4():
-#     assert answer(13, 3) == "81"
-#
-#
+
+def test_入力例3():
+    assert answer(4, 9, 6) == "No"
+
+
+def test_入力例4():
+    assert answer(3, 3, 4) == "Yes"
+
 # def test_入力例5():
 #     assert answer(0, 3) == "3"
