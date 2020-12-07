@@ -1,23 +1,32 @@
-# https://atcoder.jp/contests/abc088/tasks/abc088_b
+# https://atcoder.jp/contests/abc083/tasks/abc083_b
 
-def answer(N: int, A: list) -> str:
-    A.sort(reverse=True)
-    Alice = sum(A[0::2])
-    Bob = sum(A[1::2])
+# 1以上N以下の整数のうち、
+# 10進法での各桁の和がA以上B以下であるものの
+# 総和を出力せよ。
 
-    return str(abs(Alice - Bob))
+def answer(N: int, A: int, B: int) -> str:
+    answer = 0
+    for i in range(1, N + 1):
+        X = i
+        C = 0
+        for j in range(5):
+            C += X % 10
+            X = X // 10
+        if A <= C <= B:
+            answer += i
+    return str(answer)
 
 
 def test_入力例1():
-    assert answer(2, [3, 1]) == "2"
+    assert answer(20, 2, 5) == "84"
 
 
 def test_入力例2():
-    assert answer(3, [2, 7, 4]) == "5"
+    assert answer(10, 1, 2) == "13"
 
 
 def test_入力例3():
-    assert answer(4, [20, 18, 2, 18]) == "18"
+    assert answer(100, 4, 16) == "4554"
 
 # def test_入力例4():
 #     assert answer() == ""
