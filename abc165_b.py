@@ -1,23 +1,11 @@
-import re
+# https://atcoder.jp/contests/abc165/submissions/18688884
 
-string = input()
-pattern = re.compile(r'^([^L][^R])*[^L]?$')
-if pattern.match(string):
-    print("Yes")
-else:
-    print("No")
+X = int(input())
 
-# def test_入力例1():
-#     assert answer("RUDLUDR") == "Yes"
-#
-# def test_入力例2():
-#     assert answer("DULL") == "No"
-#
-# def test_入力例3():
-#     assert answer("UUUUUUUUUUUUUUU") == "Yes"
-#
-# def test_入力例4():
-#     assert answer("ULURU") == "No"
-#
-# def test_入力例5():
-#     assert answer("RDULULDURURLRDULRLR") == "Yes"
+deposit = 100
+years = 0
+
+while deposit < X:
+    deposit += deposit // 100
+    years += 1
+print(years)
