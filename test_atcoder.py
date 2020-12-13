@@ -1,23 +1,36 @@
-# https://atcoder.jp/contests/abc165/tasks/abc165_b
-def answer(X: int) -> str:
-    deposit = 100
-    years = 0
-    while deposit < X:
-        deposit += deposit // 100
-        years += 1
-    return str(years)
+# https://atcoder.jp/contests/abc068/tasks/abc068_b
+def answer(N: int) -> str:
+    for i in range(N, 0, -1):
+        if i == 1:
+            return str(i)
+        if i == 2:
+            return str(i)
+        if i == 4:
+            return str(i)
+        if i == 8:
+            return str(i)
+        if i == 16:
+            return str(i)
+        if i == 32:
+            return str(i)
+        if i == 64:
+            return str(i)
 
 
 def test_入力例1():
-    assert answer(103) == "3"
+    assert answer(7) == "4"
 
 
 def test_入力例2():
-    assert answer(1000000000000000000) == "3760"
+    assert answer(32) == "32"
 
 
 def test_入力例3():
-    assert answer(1333333333) == "1706"
+    assert answer(1) == "1"
+
+
+def test_入力例4():
+    assert answer(100) == "64"
 
 # https://atcoder.jp/contests/abc094/tasks/abc094_b
 # def answer(N: int, M: int, X: int, A(list)) -> str:
