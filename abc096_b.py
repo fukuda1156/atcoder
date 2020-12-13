@@ -3,4 +3,7 @@
 ABC = list(map(int, input().split()))
 K = int(input())
 
-print(sum(ABC) + (max(ABC) * (2 ** K - 1)))
+if K == 1:
+    print(int(max(ABC) * 2 + (sum(ABC) - max(ABC))))
+else:
+    print(int(max(ABC) ** K + (sum(ABC) - max(ABC))))
