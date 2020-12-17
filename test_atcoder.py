@@ -1,20 +1,22 @@
-def answer(n: int, x: int) -> str:
-    if x - 1 <= n - x:
-        return str(x - 1)
-    if x - 1 >= n - x:
-        return str(n - x)
+# https://atcoder.jp/contests/abc142/tasks/abc142_a
+def answer(N: int) -> float:
+    odd = 0
+    for i in range(1, N + 1, 1):
+        if i % 2 != 0:
+            odd += 1
+    return odd / N
 
 
 def test_入力例1():
-    assert answer(5, 2) == "1"
+    assert answer(4) == 0.5000000000
 
 
 def test_入力例2():
-    assert answer(6, 4) == "2"
+    assert answer(5) == 0.6000000000
 
 
 def test_入力例3():
-    assert answer(90, 30) == "29"
+    assert answer(1) == 1.0000000000
 
 # def test_入力例4():
 #     assert answer(50) == 625
