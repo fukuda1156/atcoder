@@ -1,19 +1,20 @@
-def answer(A: int, B: int) -> str:
-    if B % A == 0:
-        return str(int(B / A))
-    else:
-        return str(B // A + 1)
+def answer(n: int, x: int) -> str:
+    if x - 1 <= n - x:
+        return str(x - 1)
+    if x - 1 >= n - x:
+        return str(n - x)
 
 
 def test_入力例1():
-    assert answer(12, 36) == "3"
+    assert answer(5, 2) == "1"
 
 
 def test_入力例2():
-    assert answer(12, 100) == "9"
+    assert answer(6, 4) == "2"
 
-# def test_入力例3():
-#     assert answer(28, 21) == "4:3"
+
+def test_入力例3():
+    assert answer(90, 30) == "29"
 
 # def test_入力例4():
 #     assert answer(50) == 625
