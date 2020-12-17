@@ -1,21 +1,19 @@
-def answer(N: int) -> int:
-    odd = 0
-    for i in range(N, 0, -1):
-        if len(str(i)) % 2 == 1:
-            odd += 1
-    return odd
-
+def answer(W: int, H: int) -> str:
+    if W / 4 == H / 3:
+        return "4:3"
+    else:
+        return "16:9"
 
 def test_入力例1():
-    assert answer(11) == 9
+    assert answer(4, 3) == "4:3"
 
 
 def test_入力例2():
-    assert answer(136) == 46
+    assert answer(16, 9) == "16:9"
 
 
 def test_入力例3():
-    assert answer(100000) == 90909
+    assert answer(28, 21) == "4:3"
 
 # def test_入力例4():
-#     assert answer() == ""
+#     assert answer(50) == 625
