@@ -1,18 +1,16 @@
 def answer(A: int, B: int) -> int:
-    road_area = A + B - 1
-    all_area = A * B
-    return all_area - road_area
+    if A == B:
+        return A + B
+    if A != B:
+        return max(A, B) + (max(A, B) - 1)
 
 
 def test_入力例1():
-    assert answer(2, 2) == 1
+    assert answer(5, 3) == 9
 
-
-# A * B == 4
-# A + B == 2
 
 def test_入力例2():
-    assert answer(5, 7) == 24
+    assert answer(6, 6) == 12
 
 # def test_入力例3():
 #     assert answer(12, 6) == "YES"
