@@ -1,18 +1,23 @@
-def answer(A: str, B: str) -> int:
-    A = int(A[0]) + int(A[1]) + int(A[2])
-    B = int(B[0]) + int(B[1]) + int(B[2])
-    return max(A, B)
+def answer(X: int, Y: int) -> str:
+    MINPOINT = min(X, Y) + 3
+    MAXPOINT = max(X, Y)
+
+    if MINPOINT > MAXPOINT:
+        return "Yes"
+    else:
+        return "No"
+
 
 def test_入力例1():
-    assert answer("123", "234") == 9
+    assert answer(3, 5) == "Yes"
 
 
 def test_入力例2():
-    assert answer("593", "953") == 17
+    assert answer(6, 2) == "No"
 
 
 def test_入力例3():
-    assert answer("100", "999") == 27
+    assert answer(12, 15) == "No"
 
 # def test_入力例4():
 #     assert answer(25, 12) == 11
