@@ -1,21 +1,16 @@
-def answer(N: int) -> str:
-    result = sum(list(map(int, str(N))))
-
-    if N % result == 0:
-        return ("Yes")
-    else:
-        return ("No")
+def answer(S: str) -> int:
+    len(S) / 2
 
 def test_入力例1():
-    assert answer(12) == "Yes"
+    assert answer("redcoder") == 1
 
 
 def test_入力例2():
-    assert answer(57) == "No"
+    assert answer("vvvvvv") == 0
 
 
 def test_入力例3():
-    assert answer(148) == "No"
+    assert answer("abcdabc") == 2
 
 # def test_入力例4():
 #     assert answer(25, 12) == 11
