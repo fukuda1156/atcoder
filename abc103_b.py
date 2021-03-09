@@ -1,7 +1,11 @@
-S = list(input())
-T = list(input())
+# https://atcoder.jp/contests/abc103/submissions/20788271
 
-if set(S) == set(T):
+S = input()
+T = input()
+
+S += S
+
+if T in S:
     print("Yes")
 else:
     print("No")
